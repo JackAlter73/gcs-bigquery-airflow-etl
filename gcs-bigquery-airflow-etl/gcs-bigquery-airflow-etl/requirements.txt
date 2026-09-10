@@ -1,5 +1,0 @@
-# Runtime pins are loose on purpose. Tighten when you deploy.
-apache-airflow>=2.8.0,<3.0.0
-apache-airflow-providers-google>=10.0.0
-pandas>=2.0.0
-python-dotenv>=1.0.0
