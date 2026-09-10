@@ -4,7 +4,7 @@ Public demo of a small production-style file pipeline:
 
 **GCS landing file → validate → BigQuery `raw` (one business-date partition) → BigQuery `curated` (same date, light rules).**
 
-This is a contractor reference repo. The data is handwritten fake orders. It is not connected to any employer, bank, or live warehouse.
+This is a demo reference repo. The data is handwritten fake orders. It is not connected to any employer, or live warehouse.
 
 ## What you can reuse
 
