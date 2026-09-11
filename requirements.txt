@@ -1,5 +1,9 @@
-# Runtime pins are loose on purpose. Tighten when you deploy.
-apache-airflow>=2.8.0,<3.0.0
-apache-airflow-providers-google>=10.0.0
-pandas>=2.0.0
+# Local check + personal GCP smoke test (scripts/validate_orders.py, scripts/run_once.py).
 python-dotenv>=1.0.0
+google-cloud-storage>=2.14.0
+google-cloud-bigquery>=3.20.0
+
+# Install these only on an Airflow box (Composer / MWAA / local Airflow).
+# Do not install them into the venv used for validate_orders / run_once.
+# apache-airflow>=2.8.0,<3.0.0
+# apache-airflow-providers-google>=10.0.0
