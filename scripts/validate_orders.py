@@ -138,14 +138,17 @@ def main() -> int:
         print(f"ERROR invalid business date: {exc}", file=sys.stderr)
         return 2
 
+    _, rows = load_rows(path)
     errors = validate(path, business_date)
     if errors:
-        print(f"FAIL {path.name} locked_date={business_date}")
+        print(
+            f"FAIL {path.name} locked_date={business_date} "
+            f"rows={len(rows)} errors={len(errors)}"
+        )
         for item in errors:
             print(f"  - {item}")
         return 1
-
-    print(f"OK {path.name} locked_date={business_date}")
+    print(f"OK {path.name} locked_date={business_date} rows={len(rows)}")
     return 0
 
 
